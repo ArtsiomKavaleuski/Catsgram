@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.3">
-<file name="C:\Users\Koval\IdeaProjects\Catsgram\src\main\java\ru\yandex\practicum\catsgram\CatsgramApp.java">
+<file name="C:\Users\kas\IdeaProjects\Catsgram\src\main\java\ru\yandex\practicum\catsgram\CatsgramApp.java">
+</file>
+<file name="C:\Users\kas\IdeaProjects\Catsgram\src\main\java\ru\yandex\practicum\catsgram\model\Image.java">
+</file>
+<file name="C:\Users\kas\IdeaProjects\Catsgram\src\main\java\ru\yandex\practicum\catsgram\model\Post.java">
+</file>
+<file name="C:\Users\kas\IdeaProjects\Catsgram\src\main\java\ru\yandex\practicum\catsgram\model\User.java">
 </file>
 </checkstyle>
