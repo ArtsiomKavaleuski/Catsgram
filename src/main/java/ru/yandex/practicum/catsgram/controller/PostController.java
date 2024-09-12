@@ -23,6 +23,7 @@ public class PostController {
 
     @PostMapping
     public Post create(@RequestBody Post post) {
+
         // проверяем выполнение необходимых условий
         if (post.getDescription() == null || post.getDescription().isBlank()) {
             throw new ConditionsNotMetException("Описание не может быть пустым");
