@@ -18,8 +18,10 @@ public class PostController {
     }
 
     @GetMapping("/posts")
-    public Collection<Post> findAll() {
-        return postService.findAll();
+    public Collection<Post> findAll(@RequestParam int size,
+                                    @RequestParam String sort,
+                                    @RequestParam int from) {
+        return postService.findAll(size, sort, from);
     }
 
     @GetMapping("/posts/{id}")
