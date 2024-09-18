@@ -18,7 +18,24 @@ public class PostService {
     }
 
     public Collection<Post> findAll(int size, String sort, int from) {
-        return posts.values().stream().sorted(new PostByDateComparator()).toList().subList(from, from + size);
+        List<Post> postsOrdered = new ArrayList<>(posts.values().stream().toList());
+        if(sort.equals("asc")) {
+            Collections.sort(postsOrdered);
+        }
+        if (sort.equals("desc")) {
+            Collections.reverse(postsOrdered);
+        }
+        if (from == -1) {
+            if (posts.size() <= size) {
+            return postsOrdered.subList(0, posts.size());
+        } else {
+            return postsOrdered.subList(posts.size() -  size, posts.size());
+            }
+        } else if (from + size > posts.size()) {
+            return postsOrdered.subList(from, posts.size());
+        } else {
+            return postsOrdered.subList(from, from + size);
+        }
     }
 
         public Optional<Post> findById (long id){
